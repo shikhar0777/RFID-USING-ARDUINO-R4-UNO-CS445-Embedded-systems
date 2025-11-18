@@ -1,40 +1,44 @@
 SMART R4 – RFID Attendance System
+
 Using Arduino UNO R4 WiFi & MFRC522
 
 Course: CS 445 – Embedded Systems
 Instructor: Dr. Ali Al-Sinayyid
 Student: Shikhar Pandey
-West Virginia State University
+Institution: West Virginia State University
 
 Project Overview
 
-The SMART R4 project is a simple RFID-based attendance system that uses the Arduino UNO R4 WiFi and the MFRC522 RFID reader.
-When an RFID card is tapped, the system reads the card’s UID, checks if it is authorized, and displays Access Granted or Access Denied on the Serial Monitor. Authorized scans can be logged with timestamps for attendance tracking.
+SMART R4 is an RFID-based attendance system developed using the Arduino UNO R4 WiFi and the MFRC522 RFID reader. When an RFID card is tapped, the system reads the card’s UID, verifies whether it is authorized, and then displays either “Access Granted” or “Access Denied” on the Serial Monitor.
+Authorized entries can also be logged with timestamps for attendance tracking.
 
-The system provides a fast, contactless, and reliable alternative to manual attendance methods.
+This project provides a fast, contactless, and reliable alternative to traditional manual attendance systems.
 
-💻 Software Setup
+Software Setup
 
-To run this project, you need:
+To run and develop this project, the following software components are required:
 
 1. Arduino IDE (Latest Version)
 
-Used for writing, compiling, and uploading the code.
+Used for writing, compiling, and uploading the program.
 
-2. Required Framework & Packages
+2. Required Framework and Libraries
 
-Install the following libraries in Arduino IDE:
+Install the following libraries through the Arduino IDE Library Manager:
 
-MFRC522 Library (for the RFID module)
+MFRC522 Library – required for interfacing with the RFID module
 
-SPI Library (built-in, used for communication)
+SPI Library – built-in library used for SPI communication
 
 3. Board Package
 
-Arduino UNO R4 / Renesas RA4M1 Board Support
-(Install from: Tools → Board Manager → Arduino Mbed OS / UNO R4)
+Install the board support package for:
 
-That’s all needed for development, testing, and uploading.
+Arduino UNO R4 / Renesas RA4M1
+Available under:
+Tools → Board Manager → Arduino Mbed OS (UNO R4)
+
+This software setup ensures proper compilation, library support, and smooth communication with the hardware.
 
 Components Used
 
@@ -42,48 +46,46 @@ Arduino UNO R4 WiFi
 
 MFRC522 RFID Reader
 
-RFID Tags/Cards
+RFID Cards/Tags
 
 Jumper Wires
 
 How It Works
 
-User taps the RFID card
+User taps an RFID card on the MFRC522 reader
 
-MFRC522 reads the card UID
+The module reads the unique UID
 
-Arduino processes and checks authorization
+Arduino checks the UID against authorized values
 
 Valid UID → Attendance recorded
 
 Invalid UID → Access denied
 
-Results shown on Serial Monitor
+Status is displayed on the Serial Monitor
 
-Data can be exported to an Excel sheet or cloud system
+Logged data can be exported to Excel or cloud storage for record-keeping
 
 Objectives
 
-Build a simple RFID attendance system
+Develop a functional RFID attendance system
 
-Read and verify card UIDs accurately
+Correctly read and verify RFID card UIDs
 
-Make attendance fast and error-free
+Provide a fast and error-free attendance process
 
-Allow easy digital record-keeping
+Enable simple digital record management
 
 Testing
 
-Code tested through Arduino IDE Serial Monitor
+Functionality tested through the Arduino IDE Serial Monitor
 
 UIDs simulated and validated
 
-SPI communication verified
+SPI communication verified between Arduino and MFRC522
 
-Full flow tested virtually before hardware connection
+Full system flow tested virtually before hardware deployment
 
 Conclusion
 
-The SMART R4 RFID Attendance System is a clean, low-cost, and modern solution for classrooms, labs, and offices. It demonstrates key embedded systems concepts and can be upgraded easily with WiFi logging, LCD display, buzzer alerts, or a full dashboard.
-
-
+The SMART R4 RFID Attendance System delivers a clean, low-cost, and modern solution for tracking attendance in classrooms, labs, offices, and similar environments. It demonstrates essential embedded systems principles and provides a strong foundation for future upgrades such as WiFi-based logging, LCD output, buzzer alerts, or full dashboard integration.
